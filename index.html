@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle"></title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="nav-brand">
+                    <i data-lucide="heart"></i>
+                    <span id="brandName"></span>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="#servicios" id="navServices"></a>
+                    <a href="#nosotros" id="navAbout"></a>
+                    <a href="#contacto" id="navContact"></a>
+                    <button class="btn btn-primary" onclick="showDirectory()" id="navViewDirectory"></button>
+                </nav>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 id="heroTitle"></h1>
+                        <p id="heroDescription"></p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary btn-large" onclick="showDirectory()">
+                                <i data-lucide="map-pin"></i>
+                                <span id="heroSearchButton"></span>
+                            </button>
+                            <button class="btn btn-outline btn-large">
+                                <i data-lucide="phone"></i>
+                                <span id="heroEmergencyButton"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Veterinario con mascota">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features" id="servicios">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="featuresTitle"></h2>
+                    <p id="featuresDescription"></p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i data-lucide="map-pin"></i>
+                        <h3 id="feature1Title"></h3>
+                        <p id="feature1Description"></p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="shield-check"></i>
+                        <h3 id="feature2Title"></h3>
+                        <p id="feature2Description"></p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="clock"></i>
+                        <h3 id="feature3Title"></h3>
+                        <p id="feature3Description"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="statVeterinarias"></div>
+                        <div class="stat-label" id="statVeterinariasLabel"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="statCities"></div>
+                        <div class="stat-label" id="statCitiesLabel"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="statPets"></div>
+                        <div class="stat-label" id="statPetsLabel"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="statRating"></div>
+                        <div class="stat-label" id="statRatingLabel"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <h2 id="ctaTitle"></h2>
+                <p id="ctaDescription"></p>
+                <button class="btn btn-primary btn-large" onclick="showDirectory()" id="ctaButton"></button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contacto">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-brand">
+                            <i data-lucide="heart"></i>
+                            <span id="footerBrandName"></span>
+                        </div>
+                        <p id="footerBrandDescription"></p>
+                    </div>
+                    <div class="footer-section">
+                        <h4 id="footerServicesTitle"></h4>
+                        <ul id="footerServicesList">
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 id="footerCompanyTitle"></h4>
+                        <ul id="footerCompanyList">
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 id="footerContactTitle"></h4>
+                        <ul id="footerContactList">
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p id="footerCopyright"></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Directory Page -->
+    <div id="directory-page" class="hidden">
+        <!-- Directory Header -->
+        <header class="directory-header">
+            <div class="container">
+                <div class="directory-nav">
+                    <div class="nav-brand" onclick="showLanding()">
+                        <i data-lucide="heart"></i>
+                        <span id="directoryBrandName"></span>
+                    </div>
+                    <button class="btn btn-outline" onclick="showLanding()">
+                        <i data-lucide="arrow-left"></i>
+                        <span id="backToHomeButton"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Directory Title -->
+            <div class="directory-title">
+                <h1 id="directoryTitle"></h1>
+                <p id="directoryDescription"></p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-container">
+                <div class="filters-grid">
+                    <div class="search-input">
+                        <i data-lucide="search"></i>
+                        <input type="text" id="searchInput" placeholder="">
+                    </div>
+                    <select id="cityFilter">
+                        <option value="todas" id="allCitiesOption"></option>
+                        <option value="Ciudad de México">Ciudad de México</option>
+                        <option value="Guadalajara">Guadalajara</option>
+                        <option value="Monterrey">Monterrey</option>
+                    </select>
+                    <select id="sortBy">
+                        <option value="distancia" id="sortByNearest"></option>
+                        <option value="rating" id="sortByRating"></option>
+                        <option value="nombre" id="sortByName"></option>
+                    </select>
+                    <button class="btn btn-primary" onclick="applyFilters()">
+                        <i data-lucide="filter"></i>
+                        <span id="applyFiltersButton"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Count -->
+            <div class="results-info">
+                <p id="resultsCount"></p>
+            </div>
+
+            <!-- Veterinarias Grid -->
+            <div id="veterinariasGrid" class="veterinarias-grid">
+                <!-- Cards generated dynamically -->
+            </div>
+
+            <!-- No Results -->
+            <div id="noResults" class="no-results hidden">
+                <i data-lucide="search-x"></i>
+                <h3 id="noResultsTitle"></h3>
+                <p id="noResultsDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail Page -->
+    <div id="detail-page" class="hidden">
+        <!-- Detail Header -->
+        <header class="directory-header">
+            <div class="container">
+                <div class="directory-nav">
+                    <div class="nav-brand" onclick="showLanding()">
+                        <i data-lucide="heart"></i>
+                        <span id="detailBrandName"></span>
+                    </div>
+                    <button class="btn btn-outline" onclick="goBackToDirectory()">
+                        <i data-lucide="arrow-left"></i>
+                        <span id="backToResultsButton"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Vet Detail Content -->
+            <div id="vetDetailContent" class="vet-detail-container">
+                <!-- Content generated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        // Inicializar Lucide icons cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
