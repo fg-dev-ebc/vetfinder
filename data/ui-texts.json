@@ -1,0 +1,114 @@
+{
+  "site": {
+    "title": "vetfinder - directorio de veterinarias",
+    "brandName": "vetfinder"
+  },
+  "navigation": {
+    "services": "servicios",
+    "about": "nosotros",
+    "contact": "contacto",
+    "viewDirectory": "ver directorio",
+    "backToHome": "volver al inicio",
+    "backToResults": "volver a resultados"
+  },
+  "hero": {
+    "title": "encuentra la mejor <span class=\"highlight\">veterinaria</span> cerca de ti",
+    "description": "conectamos a las mascotas con los mejores profesionales veterinarios. encuentra atención de calidad, cerca de tu ubicación.",
+    "searchButton": "buscar veterinarias",
+    "emergencyButton": "emergencias 24/7"
+  },
+  "features": {
+    "title": "¿por qué elegir vetfinder?",
+    "description": "facilitamos la búsqueda de atención veterinaria de calidad para tu mascota",
+    "smartLocation": {
+      "title": "ubicación inteligente",
+      "description": "encuentra veterinarias cerca de ti usando tu ubicación actual"
+    },
+    "verifiedProfessionals": {
+      "title": "profesionales verificados",
+      "description": "todos nuestros veterinarios están certificados y verificados"
+    },
+    "flexibleSchedules": {
+      "title": "horarios flexibles",
+      "description": "encuentra atención veterinaria en horarios que se adapten a ti"
+    }
+  },
+  "stats": {
+    "veterinarias": "veterinarias registradas",
+    "cities": "ciudades cubiertas",
+    "pets": "mascotas atendidas",
+    "rating": "calificación promedio"
+  },
+  "cta": {
+    "title": "¿listo para encontrar la veterinaria perfecta?",
+    "description": "únete a miles de dueños de mascotas que confían en vetfinder para encontrar la mejor atención veterinaria",
+    "button": "explorar directorio"
+  },
+  "footer": {
+    "brandDescription": "conectando mascotas con los mejores veterinarios desde 2024",
+    "servicesTitle": "servicios",
+    "services": [
+      "directorio de veterinarias",
+      "emergencias 24/7",
+      "consultas online",
+      "vacunación"
+    ],
+    "companyTitle": "empresa",
+    "company": [
+      "sobre nosotros",
+      "contacto",
+      "términos de uso",
+      "privacidad"
+    ],
+    "contactTitle": "contacto",
+    "contactInfo": [
+      "info@vetfinder.com",
+      "+1 (555) 123-4567",
+      "ciudad de méxico, méxico"
+    ],
+    "copyright": "© 2024 vetfinder. todos los derechos reservados."
+  },
+  "directory": {
+    "title": "directorio de veterinarias",
+    "description": "encuentra la mejor atención veterinaria cerca de ti",
+    "searchPlaceholder": "buscar por nombre o zona...",
+    "allCities": "todas las ciudades",
+    "sortBy": {
+      "nearest": "más cercanas",
+      "rating": "mejor calificadas",
+      "name": "nombre a-z"
+    },
+    "applyFilters": "aplicar filtros",
+    "loadingText": "cargando veterinarias...",
+    "showingResults": "mostrando",
+    "veterinarias": "veterinarias",
+    "orderedByDistance": "ordenadas por distancia",
+    "noResults": {
+      "title": "no se encontraron veterinarias",
+      "description": "intenta ajustar tus filtros de búsqueda"
+    }
+  },
+  "vetCard": {
+    "call": "llamar",
+    "directions": "cómo llegar",
+    "details": "ver detalles",
+    "badge24h": "24h",
+    "moreServices": "más",
+    "reviews": "reseñas"
+  },
+  "vetDetail": {
+    "availableServices": "servicios disponibles",
+    "userReviews": "reseñas de usuarios",
+    "addReview": "agregar reseña",
+    "callNow": "llamar ahora",
+    "howToGet": "cómo llegar",
+    "distance": "de distancia",
+    "noReviews": "no hay reseñas aún. ¡sé el primero en compartir tu experiencia!",
+    "addReviewAlert": "funcionalidad de agregar reseña próximamente. ¡gracias por tu interés!"
+  },
+  "messages": {
+    "locationError": "error obteniendo ubicación:",
+    "initSuccess": "vetfinder inicializado correctamente",
+    "mobileMenuError": "elementos del menú móvil no encontrados"
+  }
+}

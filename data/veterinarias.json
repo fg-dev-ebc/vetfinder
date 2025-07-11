@@ -1,0 +1,104 @@
+{
+  "veterinarias": [
+    {
+      "id": 1,
+      "nombre": "clínica veterinaria san ángel",
+      "direccion": "av. revolución 1234, san ángel, cdmx",
+      "telefono": "+52 55 1234-5678",
+      "horario": "lun-vie 8:00-20:00, sáb 9:00-18:00",
+      "rating": 4.8,
+      "reviews": 124,
+      "servicios": ["consulta general", "cirugía", "emergencias", "radiología"],
+      "imagen": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "ciudad": "ciudad de méxico",
+      "zona": "san ángel",
+      "lat": 19.3467,
+      "lng": -99.1903,
+      "emergencia24h": true,
+      "descripcion": "clínica veterinaria con más de 15 años de experiencia en el cuidado de mascotas. contamos con equipo de última generación y un equipo de profesionales altamente capacitados.",
+      "comentarios": [
+        {
+          "id": 1,
+          "usuario": "maría gonzález",
+          "rating": 5,
+          "fecha": "2024-06-15",
+          "comentario": "excelente atención, muy profesionales. mi perro salió muy bien de la cirugía y el seguimiento fue perfecto.",
+          "mascota": "perro"
+        },
+        {
+          "id": 2,
+          "usuario": "carlos mendoza",
+          "rating": 4,
+          "fecha": "2024-06-10",
+          "comentario": "buena atención, aunque tuve que esperar un poco. los precios son justos y el doctor muy amable.",
+          "mascota": "gato"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "hospital veterinario roma norte",
+      "direccion": "calle orizaba 45, roma norte, cdmx",
+      "telefono": "+52 55 2345-6789",
+      "horario": "24 horas",
+      "rating": 4.9,
+      "reviews": 89,
+      "servicios": ["consulta general", "radiología", "laboratorio", "emergencias", "uci"],
+      "imagen": "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "ciudad": "ciudad de méxico",
+      "zona": "roma norte",
+      "lat": 19.4126,
+      "lng": -99.1576,
+      "emergencia24h": true,
+      "descripcion": "hospital veterinario de especialidades con atención 24 horas. especialistas en medicina interna, cirugía y cuidados intensivos.",
+      "comentarios": [
+        {
+          "id": 1,
+          "usuario": "jorge pérez",
+          "rating": 5,
+          "fecha": "2024-06-20",
+          "comentario": "salvaron a mi perrito en una emergencia nocturna. personal muy capacitado y instalaciones excelentes.",
+          "mascota": "perro"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "veterinaria condesa",
+      "direccion": "av. tamaulipas 123, condesa, cdmx",
+      "telefono": "+52 55 3456-7890",
+      "horario": "lun-dom 9:00-19:00",
+      "rating": 4.7,
+      "reviews": 156,
+      "servicios": ["consulta general", "vacunación", "estética", "nutrición"],
+      "imagen": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      "ciudad": "ciudad de méxico",
+      "zona": "condesa",
+      "lat": 19.4103,
+      "lng": -99.1711,
+      "emergencia24h": false,
+      "descripcion": "veterinaria familiar con enfoque integral en el bienestar de tu mascota. servicios de medicina preventiva y estética canina.",
+      "comentarios": [
+        {
+          "id": 1,
+          "usuario": "patricia lópez",
+          "rating": 5,
+          "fecha": "2024-06-12",
+          "comentario": "excelente servicio de estética. mi golden retriever quedó hermoso y muy relajado.",
+          "mascota": "perro"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "veterinarias": "500+",
+    "cities": "50+",
+    "pets": "10k+",
+    "rating": "4.8"
+  },
+  "cities": [
+    "ciudad de méxico",
+    "guadalajara",
+    "monterrey"
+  ]
+}
