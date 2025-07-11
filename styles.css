@@ -1,4 +1,4 @@
-/* ===== RESET Y VARIABLES ===== */
+/* reset */
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ body {
   display: none !important;
 }
 
-/* ===== BOTONES ===== */
+/* botones */
 .btn {
   padding: 12px 24px;
   border: none;
@@ -82,7 +82,7 @@ body {
   font-size: 18px;
 }
 
-/* ===== HEADER (NAVBAR) ===== */
+/* header */
 .header {
   background: var(--white);
   border-bottom: 1px solid var(--gray-200);
@@ -168,7 +168,7 @@ body {
   color: var(--primary-color);
 }
 
-/* ===== HERO SECTION ===== */
+/* hero */
 .hero {
   background: linear-gradient(135deg, #ecfdf5 0%, #f0fdfa 100%);
   padding: 80px 0;
@@ -217,7 +217,7 @@ body {
   transform: scale(1.02);
 }
 
-/* ===== FEATURES SECTION ===== */
+/* features */
 .features {
   padding: 80px 0;
   background: var(--white);
@@ -278,7 +278,7 @@ body {
   color: var(--text-light);
 }
 
-/* ===== STATS SECTION ===== */
+/* stats */
 .stats {
   background: var(--primary-color);
   padding: 64px 0;
@@ -306,7 +306,7 @@ body {
   font-size: 1rem;
 }
 
-/* ===== CTA SECTION ===== */
+/* cta */
 .cta {
   padding: 80px 0;
   text-align: center;
@@ -328,7 +328,7 @@ body {
   margin-right: auto;
 }
 
-/* ===== FOOTER ===== */
+/* footer */
 .footer {
   background: var(--gray-800);
   color: var(--white);
@@ -378,7 +378,7 @@ body {
   color: #9ca3af;
 }
 
-/* ===== DIRECTORY PAGE ===== */
+/* directorio */
 .directory-header {
   background: var(--white);
   border-bottom: 1px solid var(--gray-200);
@@ -407,7 +407,7 @@ body {
   font-size: 1.125rem;
 }
 
-/* ===== FILTERS ===== */
+/* filtros */
 .filters-container {
   background: var(--white);
   padding: 24px;
@@ -473,7 +473,7 @@ select:focus {
   color: var(--text-light);
 }
 
-/* ===== VETERINARIAS GRID ===== */
+/* grid */
 .veterinarias-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -647,7 +647,7 @@ select:focus {
   background: var(--gray-200);
 }
 
-/* ===== VET DETAIL PAGE ===== */
+/* detalle */
 .vet-detail-container {
   padding: 32px 0;
 }
@@ -778,7 +778,7 @@ select:focus {
  font-weight: 600;
 }
 
-/* ===== COMMENTS SECTION ===== */
+/* comentarios */
 .comments-section {
  background: var(--white);
  border-radius: var(--radius-lg);
@@ -901,7 +901,7 @@ select:focus {
  background: var(--primary-dark);
 }
 
-/* ===== NO RESULTS ===== */
+/* vacio */
 .no-results {
  text-align: center;
  padding: 60px 20px;
@@ -924,7 +924,7 @@ select:focus {
  color: var(--text-light);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* responsive */
 @media (max-width: 768px) {
  /* Navbar Mobile */
  .nav-menu {
@@ -1072,7 +1072,7 @@ select:focus {
  }
 }
 
-/* ===== MEJORAS DE ACCESIBILIDAD ===== */
+/* accesibilidad */
 .btn:focus,
 .search-input input:focus,
 select:focus {
@@ -1085,7 +1085,7 @@ select:focus {
  outline-offset: 2px;
 }
 
-/* ===== ANIMACIONES ADICIONALES ===== */
+/* animaciones */
 @keyframes slideInUp {
  from {
    opacity: 0;
@@ -1105,7 +1105,7 @@ select:focus {
  animation: slideInUp 0.3s ease-out;
 }
 
-/* ===== ESTADOS DE CARGA ===== */
+/* loading */
 .loading {
  display: flex;
  justify-content: center;

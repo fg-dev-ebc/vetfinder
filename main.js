@@ -1,18 +1,18 @@
-// ===== DATOS DINÁMICOS =====
+// datos
 let veterinarias = [];
 let uiTexts = {};
 let stats = {};
 let cities = [];
 
-// ===== VARIABLES GLOBALES =====
+// variables
 let filteredVeterinarias = [];
 let userLocation = null;
-let lastPage = 'landing'; // Para recordar de dónde venimos
+let lastPage = 'landing';
 
-// ===== CARGAR DATOS JSON =====
+// cargar
 async function loadData() {
   try {
-    // Intentar cargar desde JSON, si falla usar datos fallback
+    // json
     try {
       const uiResponse = await fetch('data/ui-texts.json');
       uiTexts = await uiResponse.json();
@@ -23,14 +23,14 @@ async function loadData() {
       stats = vetData.stats;
       cities = vetData.cities;
     } catch (fetchError) {
-      // Fallback: usar datos embebidos
+      // fallback
       loadFallbackData();
     }
     
-    // Inicializar UI con textos
+    // ui
     initializeUI();
     
-    // Inicializar filtros
+    // filtros
     filteredVeterinarias = [...veterinarias];
     
     console.log('Datos cargados correctamente');
@@ -39,7 +39,7 @@ async function loadData() {
   }
 }
 
-// ===== DATOS FALLBACK =====
+// fallback
 function loadFallbackData() {
   uiTexts = {
     "site": {
@@ -156,7 +156,7 @@ function loadFallbackData() {
     }
   };
 
-  // Datos de veterinarias
+  // veterinarias
   const vetData = {
     "veterinarias": [
       {
@@ -267,9 +267,9 @@ function loadFallbackData() {
   cities = vetData.cities;
 }
 
-// ===== INICIALIZAR UI CON TEXTOS =====
+// inicializar
 function initializeUI() {
-  // Página principal
+  // principal
   document.getElementById('pageTitle').textContent = uiTexts.site.title;
   document.getElementById('brandName').textContent = uiTexts.site.brandName;
   document.getElementById('navServices').textContent = uiTexts.navigation.services;
@@ -277,13 +277,13 @@ function initializeUI() {
   document.getElementById('navContact').textContent = uiTexts.navigation.contact;
   document.getElementById('navViewDirectory').textContent = uiTexts.navigation.viewDirectory;
   
-  // Hero section
+  // hero
   document.getElementById('heroTitle').innerHTML = uiTexts.hero.title;
   document.getElementById('heroDescription').textContent = uiTexts.hero.description;
   document.getElementById('heroSearchButton').textContent = uiTexts.hero.searchButton;
   document.getElementById('heroEmergencyButton').textContent = uiTexts.hero.emergencyButton;
   
-  // Features section
+  // features
   document.getElementById('featuresTitle').textContent = uiTexts.features.title;
   document.getElementById('featuresDescription').textContent = uiTexts.features.description;
   document.getElementById('feature1Title').textContent = uiTexts.features.smartLocation.title;
@@ -293,7 +293,7 @@ function initializeUI() {
   document.getElementById('feature3Title').textContent = uiTexts.features.flexibleSchedules.title;
   document.getElementById('feature3Description').textContent = uiTexts.features.flexibleSchedules.description;
   
-  // Stats section
+  // stats
   document.getElementById('statVeterinarias').textContent = stats.veterinarias;
   document.getElementById('statVeterinariasLabel').textContent = uiTexts.stats.veterinarias;
   document.getElementById('statCities').textContent = stats.cities;
@@ -303,12 +303,12 @@ function initializeUI() {
   document.getElementById('statRating').textContent = stats.rating;
   document.getElementById('statRatingLabel').textContent = uiTexts.stats.rating;
   
-  // CTA section
+  // cta
   document.getElementById('ctaTitle').textContent = uiTexts.cta.title;
   document.getElementById('ctaDescription').textContent = uiTexts.cta.description;
   document.getElementById('ctaButton').textContent = uiTexts.cta.button;
   
-  // Footer
+  // footer
   document.getElementById('footerBrandName').textContent = uiTexts.site.brandName;
   document.getElementById('footerBrandDescription').textContent = uiTexts.footer.brandDescription;
   document.getElementById('footerServicesTitle').textContent = uiTexts.footer.servicesTitle;
@@ -316,7 +316,7 @@ function initializeUI() {
   document.getElementById('footerContactTitle').textContent = uiTexts.footer.contactTitle;
   document.getElementById('footerCopyright').textContent = uiTexts.footer.copyright;
   
-  // Llenar listas del footer
+  // listas
   const servicesList = document.getElementById('footerServicesList');
   servicesList.innerHTML = uiTexts.footer.services.map(service => `<li>${service}</li>`).join('');
   
@@ -326,7 +326,7 @@ function initializeUI() {
   const contactList = document.getElementById('footerContactList');
   contactList.innerHTML = uiTexts.footer.contactInfo.map(info => `<li>${info}</li>`).join('');
   
-  // Directorio
+  // directorio
   document.getElementById('directoryBrandName').textContent = uiTexts.site.brandName;
   document.getElementById('backToHomeButton').textContent = uiTexts.navigation.backToHome;
   document.getElementById('directoryTitle').textContent = uiTexts.directory.title;
@@ -341,11 +341,11 @@ function initializeUI() {
   document.getElementById('noResultsTitle').textContent = uiTexts.directory.noResults.title;
   document.getElementById('noResultsDescription').textContent = uiTexts.directory.noResults.description;
   
-  // Detalle
+  // detalle
   document.getElementById('detailBrandName').textContent = uiTexts.site.brandName;
   document.getElementById('backToResultsButton').textContent = uiTexts.navigation.backToResults;
   
-  // Agregar ciudades al select
+  // ciudades
   const cityFilter = document.getElementById('cityFilter');
   cities.forEach(city => {
     const option = document.createElement('option');
@@ -355,7 +355,7 @@ function initializeUI() {
   });
 }
 
-// ===== FUNCIONES DE NAVEGACIÓN =====
+// navegacion
 function showDirectory() {
   document.getElementById("landing-page").classList.add("hidden");
   document.getElementById("directory-page").classList.remove("hidden");
@@ -375,15 +375,15 @@ function showVetDetail(vetId) {
   const vet = veterinarias.find(v => v.id === vetId);
   if (!vet) return;
 
-  // Ocultar otras pantallas
+  // ocultar
   document.getElementById("landing-page").classList.add("hidden");
   document.getElementById("directory-page").classList.add("hidden");
   document.getElementById("detail-page").classList.remove("hidden");
 
-  // Renderizar detalle
+  // renderizar
   renderVetDetail(vet);
   
-  // Scroll to top
+  // scroll
   window.scrollTo(0, 0);
 }
 
@@ -396,14 +396,14 @@ function goBackToDirectory() {
   }
 }
 
-// ===== INICIALIZAR DIRECTORIO =====
+// directorio
 function initializeDirectory() {
   getUserLocation();
   renderVeterinarias();
   setupEventListeners();
 }
 
-// ===== GEOLOCALIZACIÓN =====
+// ubicacion
 function getUserLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -416,21 +416,21 @@ function getUserLocation() {
       },
       (error) => {
         console.log("Error obteniendo ubicación:", error);
-        // Ubicación por defecto (CDMX)
+        // defecto
         userLocation = { lat: 19.4326, lng: -99.1332 };
         applyFilters();
       }
     );
   } else {
-    // Ubicación por defecto si no hay geolocalización
+    // defecto
     userLocation = { lat: 19.4326, lng: -99.1332 };
     applyFilters();
   }
 }
 
-// ===== CALCULAR DISTANCIA =====
+// distancia
 function calculateDistance(lat1, lng1, lat2, lng2) {
-  const R = 6371; // Radio de la Tierra en km
+  const R = 6371;
   const dLat = ((lat2 - lat1) * Math.PI) / 180;
   const dLng = ((lng2 - lng1) * Math.PI) / 180;
   const a =
@@ -442,13 +442,13 @@ function calculateDistance(lat1, lng1, lat2, lng2) {
   return R * c;
 }
 
-// ===== APLICAR FILTROS =====
+// filtros
 function applyFilters() {
   const searchTerm = document.getElementById("searchInput").value.toLowerCase();
   const selectedCity = document.getElementById("cityFilter").value;
   const sortBy = document.getElementById("sortBy").value;
 
-  // Filtrar veterinarias
+  // filtrar
   filteredVeterinarias = veterinarias.filter((vet) => {
     const matchesSearch = 
       vet.nombre.toLowerCase().includes(searchTerm) || 
@@ -457,7 +457,7 @@ function applyFilters() {
     return matchesSearch && matchesCity;
   });
 
-  // Agregar distancia si tenemos ubicación del usuario
+  // distancia
   if (userLocation) {
     filteredVeterinarias = filteredVeterinarias.map((vet) => ({
       ...vet,
@@ -465,7 +465,7 @@ function applyFilters() {
     }));
   }
 
-  // Ordenar según criterio seleccionado
+  // ordenar
   filteredVeterinarias.sort((a, b) => {
     switch (sortBy) {
       case "distancia":
@@ -482,13 +482,13 @@ function applyFilters() {
   renderVeterinarias();
 }
 
-// ===== RENDERIZAR VETERINARIAS =====
+// renderizar
 function renderVeterinarias() {
   const grid = document.getElementById("veterinariasGrid");
   const noResults = document.getElementById("noResults");
   const resultsCount = document.getElementById("resultsCount");
 
-  // Actualizar contador de resultados
+  // contador
   const countText = `${uiTexts.directory.showingResults} ${filteredVeterinarias.length} ${uiTexts.directory.veterinarias}`;
   const locationText = userLocation ? ` ${uiTexts.directory.orderedByDistance}` : "";
   resultsCount.textContent = countText + locationText;
@@ -563,18 +563,18 @@ function renderVeterinarias() {
    `)
    .join("");
 
- // Reinicializar iconos de Lucide después de renderizar
+ // iconos
  lucide.createIcons();
 }
 
-// ===== RENDERIZAR DETALLE DE VETERINARIA =====
+// detalle
 function renderVetDetail(vet) {
  const detailContainer = document.getElementById("vetDetailContent");
  
- // Calcular distancia si tenemos ubicación
+ // distancia
  const distanceText = vet.distancia ? `${vet.distancia.toFixed(1)} km ${uiTexts.vetDetail.distance}` : '';
  
- // Generar estrellas para rating
+ // estrellas
  const stars = Array.from({length: 5}, (_, i) => {
    const filled = i < Math.floor(vet.rating);
    return `<i data-lucide="star" ${filled ? 'style="fill: #fbbf24; color: #fbbf24;"' : 'style="color: #d1d5db;"'}></i>`;
@@ -665,11 +665,11 @@ function renderVetDetail(vet) {
    </div>
  `;
 
- // Reinicializar iconos
+ // iconos
  lucide.createIcons();
 }
 
-// ===== RENDERIZAR COMENTARIOS =====
+// comentarios
 function renderComments(comentarios) {
  if (!comentarios || comentarios.length === 0) {
    return `
@@ -686,7 +686,7 @@ function renderComments(comentarios) {
      return `<i data-lucide="star" ${filled ? 'style="fill: #fbbf24; color: #fbbf24;"' : 'style="color: #d1d5db;"'}></i>`;
    }).join('');
 
-   // Formatear fecha
+   // fecha
    const fecha = new Date(comentario.fecha).toLocaleDateString('es-ES', {
      year: 'numeric',
      month: 'long',
@@ -714,7 +714,7 @@ function renderComments(comentarios) {
  }).join('');
 }
 
-// ===== CONFIGURAR EVENT LISTENERS =====
+// eventos
 function setupEventListeners() {
  const searchInput = document.getElementById("searchInput");
  const cityFilter = document.getElementById("cityFilter");
@@ -725,7 +725,7 @@ function setupEventListeners() {
  sortBy.addEventListener("change", applyFilters);
 }
 
-// ===== FUNCIÓN DEBOUNCE =====
+// debounce
 function debounce(func, wait) {
  let timeout;
  return function executedFunction(...args) {
@@ -738,7 +738,7 @@ function debounce(func, wait) {
  };
 }
 
-// ===== FUNCIONES DE ACCIÓN =====
+// acciones
 function callVet(telefono) {
  window.open(`tel:${telefono}`, "_self");
 }
@@ -749,12 +749,11 @@ function getDirections(lat, lng) {
 }
 
 function showAddCommentForm(vetId) {
- // Por ahora, solo mostrar una alerta
- // Más adelante puedes implementar un modal para agregar comentarios
+ // alerta
  alert(uiTexts.vetDetail.addReviewAlert);
 }
 
-// ===== MENÚ MÓVIL =====
+// movil
 function setupMobileMenu() {
  const mobileToggle = document.getElementById('mobileMenuToggle');
  const navMenu = document.getElementById('navMenu');
@@ -764,12 +763,12 @@ function setupMobileMenu() {
    return;
  }
 
- // Toggle del menú
+ // toggle
  mobileToggle.addEventListener('click', function(e) {
    e.stopPropagation();
    navMenu.classList.toggle('active');
    
-   // Cambiar icono
+   // icono
    const icon = mobileToggle.querySelector('i');
    if (navMenu.classList.contains('active')) {
      icon.setAttribute('data-lucide', 'x');
@@ -779,7 +778,7 @@ function setupMobileMenu() {
    lucide.createIcons();
  });
 
- // Cerrar menú al hacer click fuera
+ // cerrar
  document.addEventListener('click', function(e) {
    if (navMenu.classList.contains('active') && 
        !navMenu.contains(e.target) && 
@@ -791,7 +790,7 @@ function setupMobileMenu() {
    }
  });
 
- // Cerrar menú al hacer click en enlaces
+ // enlaces
  navMenu.querySelectorAll('a, button').forEach(function(element) {
    element.addEventListener('click', function() {
      navMenu.classList.remove('active');
@@ -802,7 +801,7 @@ function setupMobileMenu() {
  });
 }
 
-// ===== SMOOTH SCROLL =====
+// scroll
 function setupSmoothScroll() {
  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
    anchor.addEventListener('click', function (e) {
@@ -818,17 +817,17 @@ function setupSmoothScroll() {
  });
 }
 
-// ===== INICIALIZACIÓN =====
+// init
 document.addEventListener('DOMContentLoaded', function() {
- // Cargar datos primero
+ // datos
  loadData().then(() => {
-   // Inicializar iconos de Lucide
+   // iconos
    lucide.createIcons();
    
-   // Configurar menú móvil
+   // movil
    setupMobileMenu();
    
-   // Configurar smooth scroll
+   // scroll
    setupSmoothScroll();
    
    console.log(uiTexts.messages.initSuccess);

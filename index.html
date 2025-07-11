@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle"></title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Lucide Icons CDN -->
+    <!-- iconos -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
-    <!-- Landing Page -->
+    <!-- landing -->
     <div id="landing-page">
-        <!-- Header -->
+        <!-- header -->
         <header class="header">
             <div class="container">
                 <div class="nav-brand">
@@ -30,7 +30,7 @@
             </div>
         </header>
 
-        <!-- Hero Section -->
+        <!-- hero -->
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -55,7 +55,7 @@
             </div>
         </section>
 
-        <!-- Features -->
+        <!-- features -->
         <section class="features" id="servicios">
             <div class="container">
                 <div class="section-header">
@@ -82,7 +82,7 @@
             </div>
         </section>
 
-        <!-- Stats -->
+        <!-- stats -->
         <section class="stats">
             <div class="container">
                 <div class="stats-grid">
@@ -106,7 +106,7 @@
             </div>
         </section>
 
-        <!-- CTA -->
+        <!-- cta -->
         <section class="cta">
             <div class="container">
                 <h2 id="ctaTitle"></h2>
@@ -115,7 +115,7 @@
             </div>
         </section>
 
-        <!-- Footer -->
+        <!-- footer -->
         <footer class="footer" id="contacto">
             <div class="container">
                 <div class="footer-content">
@@ -149,9 +149,9 @@
         </footer>
     </div>
 
-    <!-- Directory Page -->
+    <!-- directorio -->
     <div id="directory-page" class="hidden">
-        <!-- Directory Header -->
+        <!-- header -->
         <header class="directory-header">
             <div class="container">
                 <div class="directory-nav">
@@ -168,13 +168,13 @@
         </header>
 
         <div class="container">
-            <!-- Directory Title -->
+            <!-- titulo -->
             <div class="directory-title">
                 <h1 id="directoryTitle"></h1>
                 <p id="directoryDescription"></p>
             </div>
 
-            <!-- Filters -->
+            <!-- filtros -->
             <div class="filters-container">
                 <div class="filters-grid">
                     <div class="search-input">
@@ -199,17 +199,17 @@
                 </div>
             </div>
 
-            <!-- Results Count -->
+            <!-- contador -->
             <div class="results-info">
                 <p id="resultsCount"></p>
             </div>
 
-            <!-- Veterinarias Grid -->
+            <!-- grid -->
             <div id="veterinariasGrid" class="veterinarias-grid">
-                <!-- Cards generated dynamically -->
+                <!-- dinamico -->
             </div>
 
-            <!-- No Results -->
+            <!-- vacio -->
             <div id="noResults" class="no-results hidden">
                 <i data-lucide="search-x"></i>
                 <h3 id="noResultsTitle"></h3>
@@ -218,9 +218,9 @@
         </div>
     </div>
 
-    <!-- Detail Page -->
+    <!-- detalle -->
     <div id="detail-page" class="hidden">
-        <!-- Detail Header -->
+        <!-- header -->
         <header class="directory-header">
             <div class="container">
                 <div class="directory-nav">
@@ -237,16 +237,16 @@
         </header>
 
         <div class="container">
-            <!-- Vet Detail Content -->
+            <!-- contenido -->
             <div id="vetDetailContent" class="vet-detail-container">
-                <!-- Content generated dynamically -->
+                <!-- dinamico -->
             </div>
         </div>
     </div>
 
     <script src="main.js"></script>
     <script>
-        // Inicializar Lucide icons cuando el DOM esté listo
+        // iconos
         document.addEventListener('DOMContentLoaded', function() {
             lucide.createIcons();
         });
